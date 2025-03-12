@@ -1,0 +1,289 @@
+@font-face {
+    font-family: primaryFontRegular;
+    src: url(../fonts/static/DMSans-Regular.ttf);
+
+}
+
+@font-face {
+    font-family: "primaryFontMedium";
+    src: url(../fonts/static/DMSans-Medium.ttf);
+
+}
+
+@font-face {
+    font-family: "primaryFontItalic";
+    src: url(../fonts/static/DMSans-MediumItalic.ttf),
+}
+
+@font-face {
+    font-family: "vFont";
+    src: url(../fonts/DMSans-VariableFont_opsz\,wght.ttf),
+
+}
+
+@font-face {
+    font-family: "vFontItalic";
+    src: url(../fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf),
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: primaryFontMedium;
+}
+
+:root {
+    --firstBackColor: #7651dc;
+    --secondBackColor: #ffcc69;
+    --thirdBackColor: #dcd1fc;
+    --forthBackColor: #faeee2;
+
+}
+
+.container {
+    display: grid;
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 1rem;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 2rem 1rem;
+}
+
+
+
+.purple {
+    background-color: var(--firstBackColor);
+}
+
+.white {
+    background-color: #fff;
+}
+
+.khaki {
+    background-color: var(--secondBackColor);
+}
+
+.toosi {
+    background-color: var(--thirdBackColor);
+}
+
+.yaasi {
+    background-color: var(--forthBackColor);
+}
+
+.social-card {
+    padding: 2rem 1.5rem;
+}
+
+.social-card h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: #fff;
+}
+
+.social-card h1 span {
+    color: var(--secondBackColor);
+}
+
+.social-card img {
+    width: 100%;
+}
+
+.social-card p {
+    text-align: center;
+    color: #fff;
+}
+
+.multiPlatformCard {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.multiPlatformCard img {
+    width: 100%;
+}
+
+.multiPlatformCard h2 {
+    font-family: vFont;
+    font-weight: 500;
+}
+
+.consistentScheduleCard {
+    overflow: hidden;
+}
+
+.consistentScheduleCard h2 {
+    margin-bottom: 2rem;
+}
+
+.consistentScheduleCard img {
+    width: 60%;
+    margin-bottom: -4rem;
+}
+
+.schedulePost h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.schedulePost p {
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 300;
+    padding-top: 1.4rem;
+}
+
+.growFollowers {
+    text-align: center;
+}
+
+.growFollowers h1 {
+    margin-top: 2rem;
+    color: #fff;
+    padding: 0 2rem;
+}
+
+.audienceGrowth {
+    text-align: left;
+}
+
+.audienceGrowth h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.audienceGrowth p {
+    font-size: 1.2rem;
+    font-weight: 100 !important;
+    margin-bottom: 1.8rem;
+}
+
+.createPost {
+    text-align: left;
+}
+
+.createPost h1 span {
+    color: var(--firstBackColor);
+    font-family: vFontItalic;
+}
+
+.createPost h1 {
+    margin-bottom: 2rem;
+
+}
+
+.aiContent {
+    text-align: left;
+}
+
+.aiContent h1 {
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        max-width: 80%;
+    }
+
+
+}
+
+@media only screen and (min-width:577px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+        gap: 1.5rem;
+        max-height: 700px;
+    }
+
+    .container * {
+        overflow: hidden;
+    }
+
+    .card {
+        border: 1px solid transparent !important;
+    }
+
+    .createPost {
+        grid-area: 1 / 1 / 7 / 2;
+        text-align: center;
+    }
+
+    .social-card {
+        grid-area: 1 / 2 / 6 / 4;
+        text-align: center;
+    }
+
+    .social-card img {
+        width: 30%;
+
+    }
+
+    .schedulePost {
+        grid-area: 1 / 4 / 10 / 5;
+    }
+
+    .aiContent {
+        grid-area: 7 / 1 / 13 / 2;
+    }
+
+    .aiContent h1 {
+        font-size: 1.5rem;
+    }
+
+    .aiContent img {
+        width: 100%;
+    }
+
+    .multiPlatformCard {
+        grid-area: 6 / 2 / 10 / 3;
+    }
+
+    .consistentScheduleCard {
+        grid-area: 6 / 3 / 10 / 4;
+    }
+
+    .audienceGrowth {
+        grid-area: 10 / 2 / 13 / 3;
+
+    }
+
+    .audienceGrowth h1,
+    .audienceGrowth p {
+        font-size: 0.8rem;
+        display: inline;
+        padding: 0 0.5rem;
+    }
+
+    .audienceGrowth img {
+        width: 90%;
+
+        margin-top: 0.6rem;
+    }
+
+
+    .growFollowers {
+        grid-area: 10 / 3 / 13 / 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 0.8rem;
+    }
+
+    .growFollowers img {
+        margin-bottom: -2rem;
+    }
+
+
+}
